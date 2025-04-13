@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Login form design</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="loginbox" id="signup" style="display: none;">
+        <img src="images2.png" class="images2">
+        <h1>Registration form</h1>
+        <form method="post" action="">
+            <p>First Name</p>
+            <input type="text" name="fname" id="fname"placeholder="Enter First Name">
+            <p>Last Name</p>
+            <input type="text" name="lname" id="lname"placeholder="Enter Last Name">
+            <p>Email Id</p>
+            <input type="email" name="email"id="email" placeholder="Enter Email Id">
+            <p>Password </p>
+            <input type="password" name="password" id="password"placeholder="Enter Password">
+           <input type="submit" name="" value="Create"><br>
+            <br>
+            <button id="signInButton">Already have Account</button>
+
+        </form>
+
+    </div>
+    <div class="loginbox" id="signin">
+        <img src="images2.png" class="images2">
+        <h1>Login form</h1>
+        <form method="post" action="">
+            <p>Email Id</p>
+            <input type="email" name="email" id="email" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" id="password" placeholder="Enter password">
+            <input type="submit" name="" value="Login"><br>
+        </form>
+         
+             <br>
+            <button id="signUpButton"> Don't have Account</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

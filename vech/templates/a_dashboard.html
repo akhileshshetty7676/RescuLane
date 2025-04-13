@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Example</title>
+  <style>
+    /* Basic styling for the page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;  /* Initially hidden on the left side */
+      background-color: #111;
+      padding-top: 20px;
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    .sidebar a {
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+
+    /* Main content */
+    .main-content {
+      margin-left: 0;
+      padding: 20px;
+      transition: margin-left 0.3s;
+      flex: 1;
+    }
+
+    /* Hamburger menu styles for small screens */
+    .hamburger {
+      font-size: 30px;
+      color: #333;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #fff;
+      border: none;
+      margin: 10px;
+      display: none;  /* Hidden by default, shown on small screens */
+    }
+
+    /* Show the sidebar when it is toggled */
+    .sidebar.open {
+      left: 0;
+    }
+
+    /* Adjustments for small screens */
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- Hamburger icon for mobile -->
+  <button class="hamburger" id="hamburger" onclick="toggleSidebar()">&#9776;</button>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Welcome to the Sidebar Example</h1>
+    <p>This is some content that will be displayed when the sidebar is visible.</p>
+  </div>
+
+  <script>
+    // Function to toggle the sidebar visibility
+    function toggleSidebar() {
+      var sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

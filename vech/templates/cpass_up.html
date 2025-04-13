@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="{{ url_for('cpass_up') }}">
+    <p>Enter new Password</p>
+    <input type="password" name="new_password" placeholder="Enter new Password">
+    <p>conform Password</p>
+    <input type="password" name="new_password" placeholder="conform Password">
+    <input type="submit" value="Change"><br>
+    </form>
+</body>
+</html>
